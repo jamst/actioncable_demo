@@ -1,0 +1,852 @@
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20180111095150)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180111095150"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-11 09:52:23.873631"], ["updated_at", "2018-01-11 09:52:23.873631"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-11 17:56:01 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rooms/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 394ms (Views: 381.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-11 17:59:39 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rooms/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 184ms (Views: 173.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-11 18:34:06 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rooms/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 183ms (Views: 172.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-11 18:35:17 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rooms/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-11 18:35:18 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rooms/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:11:27 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rooms/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 656ms (Views: 643.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:11:27 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:11:27 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:11:30 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:11:30 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "NoticesChannel"
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:15:53 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rooms/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.1ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:15:53 +0800
+RoomChannel stopped streaming from room_channel
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:15:53 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:15:53 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:15:55 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered rooms/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.1ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:15:55 +0800
+RoomChannel stopped streaming from room_channel
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:15:55 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:15:55 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+RoomChannel#speak({"message"=>"123123123"})
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "123123123"], ["created_at", "2018-01-13 08:18:59.665783"], ["updated_at", "2018-01-13 08:18:59.665783"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] Enqueued MessageBroadcastJob (Job ID: e3d8ed4a-01d4-4eb2-b2d0-8f07b3d2d79d) to Async(default) with arguments: #<GlobalID:0x007ffdb984df28 @uri=#<URI::GID gid://actioncable-demo/Message/1>>
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [e3d8ed4a-01d4-4eb2-b2d0-8f07b3d2d79d] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ffdb981e7c8 @uri=#<URI::GID gid://actioncable-demo/Message/1>>
+[ActiveJob] [MessageBroadcastJob] [e3d8ed4a-01d4-4eb2-b2d0-8f07b3d2d79d] Performed MessageBroadcastJob from Async(default) in 15.06ms
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:19:14 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial messages/_message with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jamst/workbook/test/actioncable_demo/app/views"
+):
+    1: <h1>Chat room</h1>
+    2: 
+    3: <div id="messages">
+    4:   <%= render @messages %>
+    5: </div>
+    6: 
+    7: <form>
+  
+app/views/rooms/show.html.erb:4:in `_app_views_rooms_show_html_erb___2654359419790041377_70363809972760'
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.8ms)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:19:14 +0800
+RoomChannel stopped streaming from room_channel
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:20:33 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial rooms/_messages, application/_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jamst/workbook/test/actioncable_demo/app/views"
+):
+    1: <h1>Chat room</h1>
+    2: 
+    3: <div id="messages">
+    4:   <%= render "messages" %>
+    5: </div>
+    6: 
+    7: <form>
+  
+app/views/rooms/show.html.erb:4:in `_app_views_rooms_show_html_erb___2654359419790041377_70363860619720'
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.2ms)
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:21:03 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:21:03 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:21:03 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:21:39 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial rooms/_messages, application/_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jamst/workbook/test/actioncable_demo/app/views"
+):
+    1: <h1>Chat room</h1>
+    2: 
+    3: <div id="messages">
+    4:   <%= render :partial=>"messages" %>
+    5: </div>
+    6: 
+    7: <form>
+  
+app/views/rooms/show.html.erb:4:in `_app_views_rooms_show_html_erb___2654359419790041377_70363808112660'
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.8ms)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:21:40 +0800
+RoomChannel stopped streaming from room_channel
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:22:03 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial rooms/_messages, application/_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jamst/workbook/test/actioncable_demo/app/views"
+):
+    1: <h1>Chat room</h1>
+    2: 
+    3: <div id="messages">
+    4:   <%= render partial: "messages" %>
+    5: </div>
+    6: 
+    7: <form>
+  
+app/views/rooms/show.html.erb:4:in `_app_views_rooms_show_html_erb___2654359419790041377_70363859538700'
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.3ms)
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:22:05 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial rooms/_messages, application/_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jamst/workbook/test/actioncable_demo/app/views"
+):
+    1: <h1>Chat room</h1>
+    2: 
+    3: <div id="messages">
+    4:   <%= render partial: "messages" %>
+    5: </div>
+    6: 
+    7: <form>
+  
+app/views/rooms/show.html.erb:4:in `_app_views_rooms_show_html_erb___2654359419790041377_70363841122940'
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.2ms)
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:22:13 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/_message.html.erb (3.1ms)
+  Rendered rooms/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `content' for #<Message::ActiveRecord_Relation:0x007ffdb9927430>):
+    1: <div class=“message”>
+    2:   <p><%= @messages.content %></p>
+    3: </div>
+  
+app/views/rooms/_message.html.erb:2:in `_app_views_rooms__message_html_erb__1996207661222214478_70363813766120'
+app/views/rooms/show.html.erb:4:in `_app_views_rooms_show_html_erb___2654359419790041377_70363858415600'
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.6ms)
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:23:24 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/_message.html.erb (71.9ms)
+  Rendered rooms/show.html.erb within layouts/application (73.5ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `messages' for #<#<Class:0x007ffdb4974668>:0x007ffdb453c190>):
+    1: <% @messages.each do |message| %>
+    2: 	<div class=“message”>
+    3: 	  <p><%= messages.content %></p>
+    4: 	</div>
+    5: <% end %>
+  
+app/views/rooms/_message.html.erb:3:in `block in _app_views_rooms__message_html_erb__1996207661222214478_70363859025960'
+app/views/rooms/_message.html.erb:1:in `_app_views_rooms__message_html_erb__1996207661222214478_70363859025960'
+app/views/rooms/show.html.erb:4:in `_app_views_rooms_show_html_erb___2654359419790041377_70363814422080'
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.8ms)
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:23:32 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/_message.html.erb (0.7ms)
+  Rendered rooms/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:23:32 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:23:32 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+RoomChannel#speak({"message"=>"rrrrr"})
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "rrrrr"], ["created_at", "2018-01-13 08:23:38.181804"], ["updated_at", "2018-01-13 08:23:38.181804"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] Enqueued MessageBroadcastJob (Job ID: dfe51cf0-d315-4216-bfe8-2405e74e3352) to Async(default) with arguments: #<GlobalID:0x007ffdb9cd3c00 @uri=#<URI::GID gid://actioncable-demo/Message/2>>
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [dfe51cf0-d315-4216-bfe8-2405e74e3352] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ffdb3de2408 @uri=#<URI::GID gid://actioncable-demo/Message/2>>
+[ActiveJob] [MessageBroadcastJob] [dfe51cf0-d315-4216-bfe8-2405e74e3352] Performed MessageBroadcastJob from Async(default) in 8.62ms
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:23:44 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/_message.html.erb (0.8ms)
+  Rendered rooms/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.1ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:23:44 +0800
+RoomChannel stopped streaming from room_channel
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:23:44 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:23:44 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:24:03 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/_message.html.erb (0.8ms)
+  Rendered rooms/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:24:03 +0800
+RoomChannel stopped streaming from room_channel
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:24:03 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:24:03 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+RoomChannel#speak({"message"=>"jjjjj"})
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "jjjjj"], ["created_at", "2018-01-13 08:24:59.704240"], ["updated_at", "2018-01-13 08:24:59.704240"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [112f55eb-5d2d-4d44-9a20-56ccad01940c] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ffdb7ed9970 @uri=#<URI::GID gid://actioncable-demo/Message/3>>
+[ActiveJob] [MessageBroadcastJob] [112f55eb-5d2d-4d44-9a20-56ccad01940c] Performed MessageBroadcastJob from Async(default) in 8.88ms
+[ActiveJob] Enqueued MessageBroadcastJob (Job ID: 112f55eb-5d2d-4d44-9a20-56ccad01940c) to Async(default) with arguments: #<GlobalID:0x007ffdb7f0df40 @uri=#<URI::GID gid://actioncable-demo/Message/3>>
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:25:02 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/_message.html.erb (1.0ms)
+  Rendered rooms/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:25:02 +0800
+RoomChannel stopped streaming from room_channel
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:25:02 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:25:02 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:47:07 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:47:07 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "NoticesChannel"
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:47:08 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:47:08 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:47:18 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/_message.html.erb (4.7ms)
+  Rendered rooms/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 208ms (Views: 196.2ms | ActiveRecord: 0.6ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:47:18 +0800
+There was an exception - Gem::LoadError(Specified 'redis' for Action Cable pubsub adapter, but the gem is not loaded. Add `gem 'redis'` to your Gemfile (and ensure its version is at the minimum required by Action Cable).)
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/configuration.rb:30:in `rescue in pubsub_adapter'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/configuration.rb:27:in `pubsub_adapter'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/base.rb:76:in `block in pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/base.rb:76:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/base.rb:52:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:112:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:106:in `block in stop_all_streams'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:105:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:105:in `stop_all_streams'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:242:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:242:in `block in simple'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `block in call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/execution_wrapper.rb:81:in `wrap'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:66:in `block (3 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `instance_exec'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:750:in `_run_unsubscribe_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:90:in `run_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/base.rb:187:in `unsubscribe_from_channel'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:48:in `remove_subscription'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `block in unsubscribe_from_all'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `unsubscribe_from_all'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/base.rb:182:in `handle_close'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:58:in `block in invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:39:in `block in work'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:126:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:126:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker/active_record_connection_management.rb:14:in `block in with_database_connections'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/tagged_logger_proxy.rb:22:in `block in tag'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/tagged_logger_proxy.rb:22:in `tag'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker/active_record_connection_management.rb:14:in `with_database_connections'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:60:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:60:in `block (4 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:55:in `block (3 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `instance_exec'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:750:in `_run_work_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:90:in `run_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:38:in `work'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:56:in `invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:51:in `block in async_invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:47:18 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:47:18 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel#speak({"message"=>"rrrewtr"})
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "rrrewtr"], ["created_at", "2018-01-13 08:47:24.207437"], ["updated_at", "2018-01-13 08:47:24.207437"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] Enqueued MessageBroadcastJob (Job ID: 9df4ddcd-5afd-43b3-88a8-eb57b163815d) to Async(default) with arguments: #<GlobalID:0x007fb6585b3bf8 @uri=#<URI::GID gid://actioncable-demo/Message/4>>
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [9df4ddcd-5afd-43b3-88a8-eb57b163815d] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007fb655254c08 @uri=#<URI::GID gid://actioncable-demo/Message/4>>
+[ActiveJob] [MessageBroadcastJob] [9df4ddcd-5afd-43b3-88a8-eb57b163815d] Performed MessageBroadcastJob from Async(default) in 14.54ms
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:47:31 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/_message.html.erb (0.9ms)
+  Rendered rooms/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:47:31 +0800
+There was an exception - Gem::LoadError(Specified 'redis' for Action Cable pubsub adapter, but the gem is not loaded. Add `gem 'redis'` to your Gemfile (and ensure its version is at the minimum required by Action Cable).)
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/configuration.rb:30:in `rescue in pubsub_adapter'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/configuration.rb:27:in `pubsub_adapter'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/base.rb:76:in `block in pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/base.rb:76:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/base.rb:52:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:112:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:106:in `block in stop_all_streams'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:105:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:105:in `stop_all_streams'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:242:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:242:in `block in simple'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `block in call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/execution_wrapper.rb:81:in `wrap'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:66:in `block (3 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `instance_exec'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:750:in `_run_unsubscribe_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:90:in `run_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/base.rb:187:in `unsubscribe_from_channel'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:48:in `remove_subscription'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `block in unsubscribe_from_all'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `unsubscribe_from_all'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/base.rb:182:in `handle_close'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:58:in `block in invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:39:in `block in work'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:126:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:126:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker/active_record_connection_management.rb:14:in `block in with_database_connections'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/tagged_logger_proxy.rb:22:in `block in tag'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/tagged_logger_proxy.rb:22:in `tag'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker/active_record_connection_management.rb:14:in `with_database_connections'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:60:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:60:in `block (4 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:55:in `block (3 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `instance_exec'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:750:in `_run_work_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:90:in `run_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:38:in `work'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:56:in `invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:51:in `block in async_invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:47:31 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:47:31 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:51:47 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/_message.html.erb (0.8ms)
+  Rendered rooms/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.1ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:51:47 +0800
+There was an exception - Gem::LoadError(Specified 'redis' for Action Cable pubsub adapter, but the gem is not loaded. Add `gem 'redis'` to your Gemfile (and ensure its version is at the minimum required by Action Cable).)
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/configuration.rb:30:in `rescue in pubsub_adapter'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/configuration.rb:27:in `pubsub_adapter'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/base.rb:76:in `block in pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/base.rb:76:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/base.rb:52:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:112:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:106:in `block in stop_all_streams'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:105:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:105:in `stop_all_streams'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:242:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:242:in `block in simple'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `block in call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/execution_wrapper.rb:81:in `wrap'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:66:in `block (3 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `instance_exec'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:750:in `_run_unsubscribe_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:90:in `run_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/base.rb:187:in `unsubscribe_from_channel'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:48:in `remove_subscription'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `block in unsubscribe_from_all'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `unsubscribe_from_all'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/base.rb:182:in `handle_close'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:58:in `block in invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:39:in `block in work'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:126:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:126:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker/active_record_connection_management.rb:14:in `block in with_database_connections'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/tagged_logger_proxy.rb:22:in `block in tag'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/tagged_logger_proxy.rb:22:in `tag'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker/active_record_connection_management.rb:14:in `with_database_connections'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:60:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:60:in `block (4 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:55:in `block (3 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `instance_exec'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:750:in `_run_work_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:90:in `run_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:38:in `work'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:56:in `invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:51:in `block in async_invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:51:47 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:51:47 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel#speak({"message"=>"5655"})
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "5655"], ["created_at", "2018-01-13 08:51:50.878958"], ["updated_at", "2018-01-13 08:51:50.878958"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] Enqueued MessageBroadcastJob (Job ID: 2076ce2f-da7d-4fb0-a6bc-eaf196b4c0f1) to Async(default) with arguments: #<GlobalID:0x007fb65a850558 @uri=#<URI::GID gid://actioncable-demo/Message/5>>
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [2076ce2f-da7d-4fb0-a6bc-eaf196b4c0f1] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007fb6560fbb58 @uri=#<URI::GID gid://actioncable-demo/Message/5>>
+[ActiveJob] [MessageBroadcastJob] [2076ce2f-da7d-4fb0-a6bc-eaf196b4c0f1] Performed MessageBroadcastJob from Async(default) in 9.01ms
+Started GET "/rooms/show" for 127.0.0.1 at 2018-01-13 16:51:52 +0800
+Processing by RoomsController#show as HTML
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered rooms/_message.html.erb (0.8ms)
+  Rendered rooms/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:51:52 +0800
+There was an exception - Gem::LoadError(Specified 'redis' for Action Cable pubsub adapter, but the gem is not loaded. Add `gem 'redis'` to your Gemfile (and ensure its version is at the minimum required by Action Cable).)
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/configuration.rb:30:in `rescue in pubsub_adapter'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/configuration.rb:27:in `pubsub_adapter'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/base.rb:76:in `block in pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/base.rb:76:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/base.rb:52:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:112:in `pubsub'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:106:in `block in stop_all_streams'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:105:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/streams.rb:105:in `stop_all_streams'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:242:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:242:in `block in simple'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `block in call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:456:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/execution_wrapper.rb:81:in `wrap'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:66:in `block (3 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `instance_exec'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:750:in `_run_unsubscribe_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:90:in `run_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/channel/base.rb:187:in `unsubscribe_from_channel'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:48:in `remove_subscription'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `block in unsubscribe_from_all'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `each'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/subscriptions.rb:61:in `unsubscribe_from_all'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/base.rb:182:in `handle_close'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:58:in `block in invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:39:in `block in work'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:126:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:126:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker/active_record_connection_management.rb:14:in `block in with_database_connections'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/tagged_logger_proxy.rb:22:in `block in tag'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/connection/tagged_logger_proxy.rb:22:in `tag'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker/active_record_connection_management.rb:14:in `with_database_connections'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:60:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:60:in `block (4 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/engine.rb:55:in `block (3 levels) in <class:Engine>'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `instance_exec'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:391:in `block in make_lambda'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:285:in `block in halting'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:447:in `block in around'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:455:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:750:in `_run_work_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-5.0.6/lib/active_support/callbacks.rb:90:in `run_callbacks'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:38:in `work'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:56:in `invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.0.6/lib/action_cable/server/worker.rb:51:in `block in async_invoke'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `call'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/jamst/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Started GET "/cable" for 127.0.0.1 at 2018-01-13 16:51:52 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-01-13 16:51:52 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
